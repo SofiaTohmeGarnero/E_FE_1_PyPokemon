@@ -1,4 +1,10 @@
-@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+@font-face {
+  font-family: "Pokemon";
+  src: url("./fonts/pokemon_solid-webfont.woff2") format("woff2"),
+    url("./fonts/pokemon_solid-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
 body {
   background-color: whitesmoke;
