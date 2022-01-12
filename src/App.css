@@ -1,5 +1,23 @@
+@import url(//db.onlinewebfonts.com/c/f4d1593471d222ddebd973210265762a?family=Pokemon);
+
+body {
+  background-color: whitesmoke;
+  font-family: "Pokemon", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  height: 100vh;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
 }
 
 .App-logo {
@@ -14,14 +32,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: whitesmoke;
+  background-image: url("./assets/background-image.png");
+  background-size: cover;
 }
 
 .App-link {
@@ -35,4 +54,149 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+h1 {
+  font-size: 3rem;
+  color: whitesmoke;
+  text-shadow: 5px 5px black;
+}
+
+.boton-ingreso {
+  text-decoration: none;
+  background-color: whitesmoke;
+  padding: 0.3rem 3rem;
+  border-radius: 10px;
+  color: #ed5564;
+  cursor: pointer;
+  text-shadow: 5px 5px lightgray;
+}
+
+.boton-ingreso:hover {
+  background-color: #ed5564;
+  color: whitesmoke;
+  text-shadow: 5px 5px darkgray;
+}
+
+.formulario-ingreso {
+  color: #ed5564;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-bottom: 3rem;
+}
+
+.input-contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.input-contenedor input {
+  padding: 1rem;
+  width: 300px;
+  border-radius: 10px;
+  border-style: solid;
+  margin-left: 1rem;
+}
+
+.formulario-ingreso .cuerpo-formulario {
+  display: flex;
+  flex-direction: row;
+  height: 90%;
+}
+
+.formulario-ingreso h3 {
+  width: 100%;
+  padding: 1rem;
+}
+
+.detalle-formulario {
+  width: 70%;
+  border: 1px solid darkgray;
+  margin: 0 3rem;
+  border-radius: 6px;
+  box-shadow: 5px 5px lightgray;
+}
+
+.detalle-formulario .encabezado {
+  max-width: 100%;
+  padding: 0.5rem;
+  background-color: #ed5564;
+  color: whitesmoke;
+}
+
+.cuerpo-formulario .inputs {
+  width: 40%;
+  margin-left: 2rem;
+}
+
+.nombre-seccion {
+  text-align: left;
+  margin-top: 2rem;
+  color: blue;
+  display: flex;
+  align-items: center;
+}
+
+.nombre-seccion img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+.datos-cliente .fila {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  padding: 0px 1rem;
+  flex-wrap: wrap;
+  color: #ed5564;
+}
+
+.boton-enviar {
+  padding: 0.6rem 3rem;
+  border-radius: 10px;
+  background-color: #ed5564;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Pokemon", sans-serif;
+  border: none;
+  box-shadow: 4px 4px 4px lightgray;
+  margin-bottom: 1rem;
+}
+
+.boton-enviar:hover {
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  padding-right: 4rem;
+  background-color: #ed5564;
+  color: whitesmoke;
+  font-weight: bold;
+  font-family: "Pokemon", sans-serif;
+}
+
+.form-header div {
+  display: flex;
+  align-items: center;
+}
+
+.form-header img {
+  width: 50px;
+  margin-right: 3rem;
+}
+
+.volver {
+  justify-self: end;
 }
