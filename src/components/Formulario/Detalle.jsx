@@ -25,7 +25,12 @@ const Detalle = () => {
           <p>Nombre: {nombrePokemon}</p>
         </div>
       </section>
-      <button className="boton-enviar">Enviar Solicitud</button>
+      <button
+        className="boton-enviar"
+        onClick={() => alert("Solicitud enviada :)")}
+      >
+        Enviar Solicitud
+      </button>
     </div>
   );
 };
