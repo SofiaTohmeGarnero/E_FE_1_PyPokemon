@@ -1,70 +1,48 @@
-# Getting Started with Create React App
+# Formulario Centro Pokemon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bienvenidos al primer proyecto integrador de la materia de especialización en
+Frontend I. En esta oportunidad, ayudaremos a nuestro amigo Ash a construir un
+formulario para que los entrenadores puedan atender a sus pokemons en el nuevo centro
+que Ash tiene en pueblo paleta.
 
-## Available Scripts
+## ¡Comenzamos!
 
-In the project directory, you can run:
+Una vez clonado el repositorio, lo primero que debemos hacer es instalar las dependencias.
+Para ello puedes utilizar alguno de los siguientes comandos:
 
-### `npm start`
+```
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+o
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+yarn install
+```
 
-### `npm test`
+Luego, puedes iniciar el proyecto con los comandos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `npm run build`
+o
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Ahora, tu proyecto se encontrará en la siguiente url: [http://localhost:3000](http://localhost:3000).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Primeros pasos
 
-### `npm run eject`
+Recuerda que el objetivo de esta clase es que puedas agregar la lógica necesaria para implementar:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Un estado local, que te permita controlar el valor de cada input, y
+- Un estado global, para poder compartir el valor de los inputs con el formulario
+  de vista previa.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+A lo largo del código, encontrarás algunos comentarios y sugerencias que te orientarán
+acerca de los pasos necesarios para completar la actividad.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+¡Manos a la obra!

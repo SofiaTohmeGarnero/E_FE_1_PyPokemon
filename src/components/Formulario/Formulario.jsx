@@ -1,11 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import ProviderFormulario from "../../context/ContextoFormulario";
 import pokebola from "../../assets/pokebola.png";
 import entrenador from "../../assets/entrenador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
+
+// En este componente tenemos nuestro formulario y dentro de él
+// tenemos los componentes que necesitan consumir nuestro estado.
+// Recuerda cual es el paso que debemos tomar para que nuestros
+// componentes puedan consumir un estado global.
 
 const Formulario = () => {
   return (
@@ -26,27 +30,29 @@ const Formulario = () => {
           pokémon
         </p>
         <div className="cuerpo-formulario">
-          <ProviderFormulario>
-            <div className="inputs">
-              <div>
-                <p className="nombre-seccion">
-                  <img src={entrenador} alt="entrenador" />
-                  <span>ENTRENADOR</span>
-                </p>
-                <Input name="nombre" label="Nombre" />
-                <Input name="apellido" label="Apellido" />
-                <Input name="email" label="Email" type="email" />
-              </div>
-              <div>
-                <p className="nombre-seccion">
-                  <img src={pikachu} alt="pikachu" />
-                  <span>POKEMON</span>
-                </p>
-                <Input name="nombrePokemon" label="Nombre" />
-              </div>
+          {/*
+           Si tan solo tuviesemos una manera de "encapsular" nuestros componentes
+           para que puedan acceder al estado global.
+          */}
+          <div className="inputs">
+            <div>
+              <p className="nombre-seccion">
+                <img src={entrenador} alt="entrenador" />
+                <span>ENTRENADOR</span>
+              </p>
+              <Input name="nombre" label="Nombre" />
+              <Input name="apellido" label="Apellido" />
+              <Input name="email" label="Email" type="email" />
             </div>
-            <Detalle />
-          </ProviderFormulario>
+            <div>
+              <p className="nombre-seccion">
+                <img src={pikachu} alt="pikachu" />
+                <span>POKEMON</span>
+              </p>
+              <Input name="nombrePokemon" label="Nombre" />
+            </div>
+          </div>
+          <Detalle />
         </div>
       </div>
     </>
