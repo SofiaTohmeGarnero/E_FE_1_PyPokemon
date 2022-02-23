@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Input = ({ name, label, type = "text" }) => {
   // Aqui deberíamos acceder al estado global para poder obtener los datos
