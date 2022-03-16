@@ -1,8 +1,9 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect, useRef } from "react";
 import { ContextoFormulario } from "../../context/ContextoFormulario";
 
-const Input = ({ name, label, type = "text" , isPokemon = false}) => {
-  const {handleBlur} = useContext(ContextoFormulario)
+const Input = ({ name, label, type = "text" , isPokemon = false, shouldFocus = false}) => {
+  const {handleBlur} = useContext(ContextoFormulario);
+  const ref = useRef(null);
 
   const [localState, setLocalState] = useState('')
 
@@ -20,6 +21,12 @@ const Input = ({ name, label, type = "text" , isPokemon = false}) => {
       )
   };
 
+  useEffect(() => {
+    if(ref.current && shouldFocus){
+      ref.current.focus();
+    }
+  }, [shouldFocus])
+
   return (
     <div className="input-contenedor">
       <label htmlFor={name}>{label}</label>
@@ -29,6 +36,7 @@ const Input = ({ name, label, type = "text" , isPokemon = false}) => {
         id={name}
         onChange={onChange}
         onBlur={onBlur}
+        ref={ref}
       />
     </div>
   );

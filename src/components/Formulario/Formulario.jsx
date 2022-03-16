@@ -5,12 +5,18 @@ import entrenador from "../../assets/entrenador.png";
 import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
+import Select from "../Select/Select";
 import ProviderFormulario from "../../context/ContextoFormulario";
-
-// En este componente tenemos nuestro formulario y dentro de él
-// tenemos los componentes que necesitan consumir nuestro estado.
+import { useQuery } from "react-query";
+import { getPokemonTypes } from "../../servicios/getPokemonTypes"
 
 const Formulario = () => {
+  const {
+    isLoading,
+    isError,
+    data,
+  } = useQuery(`getPokemonTypes`, getPokemonTypes);
+
   return (
     <>
       <header className="form-header">
@@ -36,7 +42,7 @@ const Formulario = () => {
                 <img src={entrenador} alt="entrenador" />
                 <span>ENTRENADOR</span>
               </p>
-              <Input name="nombre" label="Nombre" />
+              <Input name="nombre" label="Nombre" shouldFocus={true}/>
               <Input name="apellido" label="Apellido" />
               <Input name="email" label="Email" type="email" />
             </div>
@@ -46,7 +52,7 @@ const Formulario = () => {
                 <span>POKEMON</span>
               </p>
               <Input name="nombrePokemon" label="Nombre" isPokemon={true} />
-              <Input name="tipoPokemon" label="Tipo" isPokemon={true} />
+              <Select name="tipoPokemon" label="Tipo" isPokemon={true} tipos={data} disabled={isError || isLoading}/>
               <Input name="elementoPokemon" label="Elemento" isPokemon={true} />
               <Input name="alturaPokemon" label="Altura" isPokemon={true} />
               <Input name="edadPokemon" label="Edad" isPokemon={true} />
