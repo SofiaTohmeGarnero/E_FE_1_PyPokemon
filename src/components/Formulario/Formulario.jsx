@@ -6,6 +6,7 @@ import pikachu from "../../assets/pikachu.png";
 import Input from "../Input/Input";
 import Detalle from "./Detalle";
 import Select from "../Select/Select";
+import InputEspecie from "../InputEspecie/InputEspecie";
 import ProviderFormulario from "../../context/ContextoFormulario";
 import { useQuery } from "react-query";
 import { getPokemonTypes } from "../../servicios/getPokemonTypes"
@@ -56,6 +57,7 @@ const Formulario = () => {
               <Input name="elementoPokemon" label="Elemento" isPokemon={true} />
               <Input name="alturaPokemon" label="Altura" isPokemon={true} />
               <Input name="edadPokemon" label="Edad" isPokemon={true} />
+              <InputEspecie name="especiePokemon" label="Especie" isPokemon={true} />
             </div>
           </div>
           <Detalle />

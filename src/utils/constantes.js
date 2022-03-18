@@ -1,0 +1,1 @@
+export const POKE_ESPECIES_ENTREGA_POR_PAGINA = 20;
